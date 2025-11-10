@@ -7,8 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
+    <div class="site">
+            <?php
      include "includes/menu.php" 
     ?>
+    </div>
+    <?php include 'includes/footer.php'; ?>
 </body>
 </html>

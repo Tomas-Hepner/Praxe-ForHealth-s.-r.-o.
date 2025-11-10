@@ -12,8 +12,9 @@ body{
 
 .site{
     width: 100%;
-    height: 90vh;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
 }
 
 .header{
@@ -153,13 +154,441 @@ gap: 80px;
     transform: translateY(-2px);
 }
 
-/* Responsive layout */
+/* Slideshow container */
+.site__slideshow {
+    width: 100%;
+    height: 500px;              /* fixed height — you can adjust this */
+    position: relative;         /* establishes positioning context for slides */
+    overflow: hidden;
+    flex-shrink: 0;             /* prevents the flex container from resizing it */
+    background-color: black;
+    margin-bottom: 40px;
+}
+
+/* Individual slides */
+.slide {
+    display: none;
+    width: 100%;
+    height: 500px;
+    position: absolute;
+}
+
+.site__slideshow .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.site__slideshow .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Caption text */
+.caption {
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+/* Navigation arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.3);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.6);
+}
+
+/* Dots */
+.dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    margin: 0 5px;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+    background-color: rgb(50, 184, 50);
+}
+
+/* Fade animation */
+.fade {
+    animation: fadeEffect 1.2s;
+}
+
+.site__products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 per row */
+    gap: 40px;
+    padding: 60px 80px;
+    background-color: white;
+    width: 100%;
+    flex: 1 0 auto; /* allows it to grow properly under the slideshow */
+
+    border: 3px solid rgb(50, 184, 50); 
+    border-radius: 16px;                  
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+    margin: 40px auto;                     
+    max-width: 1400px;                     
+    overflow: hidden;  
+}
+
+/* Individual product card */
+.product__card {
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product__card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.product__card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product__price {
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(50, 184, 50);
+    margin-bottom: 12px;
+}
+
+.product__button {
+    background-color: rgb(50, 184, 50);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product__button:hover {
+    background-color: rgb(40, 150, 40);
+    transform: translateY(-2px);
+}
+
+.product__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;  /* spacing between title and price */
+    text-align: center;
+}
+
+.site__aboutus {
+    background-color: white;
+    padding: 60px 80px;
+    margin: 40px auto;
+    border: 3px solid rgb(50, 184, 50);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    max-width: 1200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.site__aboutus h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: rgb(50, 184, 50);
+}
+
+.site__aboutus h2 {
+    font-size: 28px;
+    font-weight: 500;
+    color: #333;
+}
+
+.site__aboutus p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 900px;
+}
+
+
+/* Hero section */
+.aboutus__hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background: url('../images/hero-background.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.aboutus__hero::after {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.4); /* dimmed overlay */
+}
+
+.aboutus__logo {
+    position: relative;
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+.aboutus__hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.aboutus__hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: rgb(50, 184, 50);
+}
+
+.aboutus__hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Employee sections */
+.aboutus__employee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    gap: 40px;
+    transform: translateY(50px); /* start slightly below */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.aboutus__employee-left {
+    flex-direction: row-reverse;
+}
+
+.employee__img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+    flex-shrink: 0;
+}
+
+.employee__text {
+    flex: 1;
+}
+
+.employee__text h1 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.employee__text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Animation trigger class */
+.aboutus__employee.show {
+    opacity: 1;
+    transform: translateY(0); /* move into place */
+}
+
+/* Responsive */
 @media (max-width: 900px) {
+    .aboutus__employee, .aboutus__employee-left {
+        flex-direction: column;
+        text-align: center;
+        transform: translateX(0);
+    }
+
+    .employee__img {
+        width: 80%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .site__aboutus {
+        padding: 50px 60px;
+    }
+    .site__aboutus h1 {
+        font-size: 40px;
+    }
+    .site__aboutus h2 {
+        font-size: 24px;
+    }
+    .site__aboutus p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .site__aboutus {
+        padding: 40px 20px;
+        margin: 30px 10px;
+    }
+    .site__aboutus h1 {
+        font-size: 32px;
+    }
+    .site__aboutus h2 {
+        font-size: 20px;
+    }
+    .site__aboutus p {
+        font-size: 15px;
+    }
+}
+
+
+@keyframes fadeEffect {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+    .site__products {
+        grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    }
+}
+
+@media (max-width: 900px) {
+    .site__products {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row */
+        padding: 40px 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .site__products {
+        grid-template-columns: 1fr; /* 1 per row on mobile */
+        padding: 30px 20px;
+    }
+
+    .product__card img {
+        height: 180px;
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .site__slideshow {
+        height: 300px;
+    }
+
+    .caption {
+        font-size: 18px;
+        bottom: 20px;
+    }
+}
+
+
+/* Responsive layout */
+@media (max-width: 768px) {
     .footer {
         flex-direction: column;
         align-items: center;
         gap: 30px;
         padding: 40px 20px;
     }
+
+    .header{
+        flex-direction: column;
+        height: 400px;
+        height: fit-content;
+        justify-content: baseline;
+        gap: 30px;
+        padding: 7.5px;
+    }
+
+    .header__menu__list{
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .header__menu{
+        width: 100%;
+        height: auto;
+    }
+
+        .site__slideshow {
+        height: 300px;
+    }
+
 }
+
 

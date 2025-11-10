@@ -1,4 +1,4 @@
-    <div class="site">
+
         <div class="header">
             <div class="header__logo">
                 <a href="index.php"><img src="images/ForHealth_logo.png" alt=""></a>
@@ -19,4 +19,3 @@
             </div>
 
         </div>
-    </div>
