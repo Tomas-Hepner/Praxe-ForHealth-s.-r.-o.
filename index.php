@@ -44,29 +44,29 @@
 
             <div class="site__products">
                 <div class="product__card">
-                    <img src="images/placeholder.jfif" alt="Product 1">
+                    <img src="images/produkt1.png" alt="Product 1">
                     <p class="product__title">Protein Whey 1kg</p>
                     <p class="product__price">499 Kč</p>
                     <button class="product__button">Přidat do košíku</button>
                 </div>
 
                 <div class="product__card">
-                    <img src="images/placeholder.jfif" alt="Product 2">
-                    <p class="product__title">Protein Whey 1kg</p>
+                    <img src="images/produkt2.png" alt="Product 2">
+                    <p class="product__title">OMEGA 3 RYBÍ OLEJ</p>
                     <p class="product__price">699 Kč</p>
                     <button class="product__button">Přidat do košíku</button>
                 </div>
 
                 <div class="product__card">
-                    <img src="images/placeholder.jfif" alt="Product 3">
-                     <p class="product__title">Protein Whey 1kg</p>
+                    <img src="images/produkt3.png" alt="Product 3">
+                     <p class="product__title">MULTIVITAMÍN KOMPLEX</p>
                     <p class="product__price">899 Kč</p>
                     <button class="product__button">Přidat do košíku</button>
                 </div>
 
                 <div class="product__card">
-                    <img src="images/placeholder.jfif" alt="Product 4">
-                    <p class="product__title">Protein Whey 1kg</p>
+                    <img src="images/produkt4.png" alt="Product 4">
+                    <p class="product__title">VITAMÍN 3D</p>
                     <p class="product__price">1099 Kč</p>
                     <button class="product__button">Přidat do košíku</button>
                 </div>
