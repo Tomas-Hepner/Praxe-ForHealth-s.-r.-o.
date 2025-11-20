@@ -1,3 +1,9 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>  
+  
   <footer class="footer">
     <div class="footer__left">
       <h3>Sledujte nás</h3>
@@ -16,7 +22,7 @@
         <p>Telefon: +420 123 456 789</p>
       </div>
       <div class="footer__button">
-        <a href="https://example.com" target="_blank">Navštívit web</a>
+        <a href="../kontakt.php" target="_blank">Navštívit web</a>
       </div>
     </div>
   </footer>

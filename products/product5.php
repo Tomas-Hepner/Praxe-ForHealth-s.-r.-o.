@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Produkt</title>
     <link rel="stylesheet" href="../css/style.css">
+            <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
 </head>
 <body>
+  <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
         <div class="site">
             <div class="header">
                 <div class="header__logo">
@@ -32,34 +38,32 @@
             <div class="product-detail__container">
                 <!-- Obrázek produktu -->
                 <div class="product-detail__image">
-                    <img src="../images/placeholder.jfif" alt="Protein ForHealth">
+                    <img src="../images/produkt5.png" alt="Protein ForHealth">
                 </div>
 
                 <!-- Informace o produktu -->
                 <div class="product-detail__info">
-                    <h1>Protein ForHealth</h1>
+                    <h1>ForHealth WHEY IZOLÁT "Ultra Clean"</h1>
                     <p class="product-detail__shortdesc">
-                        Prémiový syrovátkový protein s vysokým obsahem bílkovin pro růst a regeneraci svalů.
+                        Syrovátkový proteinový izolát s minimem tuku a laktózy. Ideální pro dietu a rychlou regeneraci po tréninku.
                     </p>
-                    <p class="product-detail__price">Cena: 899 Kč</p>
+                    <p class="product-detail__price">Cena: 999 Kč</p>
 
                     <h3>Popis produktu</h3>
                     <p>
-                        ForHealth Protein je vysoce kvalitní doplněk stravy určený pro všechny, kteří chtějí
-                        podpořit růst svalové hmoty, zlepšit regeneraci po tréninku a dodat tělu potřebné živiny.
-                        Díky minimálnímu obsahu cukru a tuku je vhodný pro sportovce i běžné uživatele.
+                       Srovátkový proteinový izolát (WPI) s minimálním obsahem tuku a laktózy. Ideální pro rychlou a čistou regeneraci po tréninku a podporu růstu svalové hmoty v dietě. Je to nejčistší forma proteinu s rychlou vstřebatelností a vysokým obsahem bílkovin (90%).
                     </p>
 
                     <h3>Parametry</h3>
                     <ul class="product-detail__params">
-                        <li>Hmotnost: 1 kg</li>
-                        <li>Obsah bílkovin: 80 %</li>
-                        <li>Chuť: Vanilka</li>
-                        <li>Balení: Uzavíratelný sáček</li>
+                        <li>Balení: 900 g prášek</li>
+                        <li>Dávka: 30 g</li>
+                        <li>Obsah bílkovin: 27 g na dávku (90%)</li>
+                        <li>Vlastnosti: Ultra čistý, Nízký obsah sacharidů a tuků, Rychlá vstřebatelnost.</li>
                     </ul>
 
 
-                    <a href="order.php" class="btn btn--large">Objednat</a>
+                    <a href="cart_add.php?id=5" class="btn btn--large">Objednat</a>
                 </div>
             </div>
         </div>

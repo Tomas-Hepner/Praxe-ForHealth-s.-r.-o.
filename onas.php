@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>ForHealth</title>
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
       <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
 </head>
 <body>
+    <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
     <div class="site">
                 <?php
         include "includes/menu.php" 
@@ -29,7 +35,7 @@
                     <img src="images/bubakom.jpg" alt="Employee 1" class="employee__img">
                     <div class="employee__text">
                         <h1>Jakub Böhm</h1>
-                        <p>John is our founder and head of product development. With over 10 years of experience in nutrition, he ensures that every supplement meets the highest standards of quality.</p>
+                        <p>Ředitel</p>
                     </div>
                 </div>
 
@@ -37,14 +43,14 @@
                     <img src="images/zibzib.jpg" alt="Employee 2" class="employee__img">
                     <div class="employee__text">
                         <h1>Tomáš Hepner</h1>
-                        <p>Jane manages our research and development team. Her dedication to innovation has driven the creation of some of our most popular products.</p>
+                        <p>Jednatel</p>
                     </div>
                 </div>
                 <div class="aboutus__employee aboutus__employee-right ">
                     <img src="images/kopec.jpg" alt="Employee 1" class="employee__img">
                     <div class="employee__text">
                         <h1>Jan Kupeček</h1>
-                        <p>John is our founder and head of product development. With over 10 years of experience in nutrition, he ensures that every supplement meets the highest standards of quality.</p>
+                        <p>Zaměstnanec</p>
                     </div>
                 </div>
 
@@ -52,7 +58,7 @@
                     <img src="images/spacir.jpg" alt="Employee 2" class="employee__img">
                     <div class="employee__text">
                         <h1>Filip Procházka</h1>
-                        <p>Jane manages our research and development team. Her dedication to innovation has driven the creation of some of our most popular products.</p>
+                        <p>Zaměstnanec</p>
                     </div>
                 </div>
 
@@ -60,7 +66,7 @@
                     <img src="images/kelak.jpg" alt="Employee 1" class="employee__img">
                     <div class="employee__text">
                         <h1>František Kellner</h1>
-                        <p>John is our founder and head of product development. With over 10 years of experience in nutrition, he ensures that every supplement meets the highest standards of quality.</p>
+                        <p>Zaměstnanec</p>
                     </div>
                 </div>
 
@@ -68,7 +74,7 @@
                     <img src="images/placeholder2.jpg" alt="Employee 2" class="employee__img">
                     <div class="employee__text">
                         <h1>Kristýna Pechová</h1>
-                        <p>Jane manages our research and development team. Her dedication to innovation has driven the creation of some of our most popular products.</p>
+                        <p>Zaměstnanec</p>
                     </div>
                 </div>
 
@@ -76,7 +82,7 @@
                     <img src="images/halacka.jpg" alt="Employee 1" class="employee__img">
                     <div class="employee__text">
                         <h1>David Halačka</h1>
-                        <p>Tomas Selby mafia</p>
+                        <p>Zaměstnanec</p>
                     </div>
                 </div>
             </div>

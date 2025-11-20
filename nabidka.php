@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Nabídka</title>
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 </head>
 <body>
+    <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
     <div class="site">
             <?php
                 include "includes/menu.php" 
@@ -30,7 +37,7 @@
             <div class="offer__item">
                 <img src="images/produkt2.png" alt="Vitamíny Daily Mix" class="offer__img">
                 <div class="offer__info">
-                    <h2>ForHealth Imuno GUMMIES</h2>
+                    <h2>ForHealth Imuno GUMMIES 300</h2>
                     <p>Chutný a revoluční způsob, jak posílit imunitní systém. Želé bonbóny s příchutí lesního ovoce kombinují klíčové mikroživiny (Vitamín C, D3 a Zinek) a Extrakt z Bezinky pro každodenní ochranu před oxidativním stresem a podporu obranyschopnosti. Ideální pro ty, kteří preferují bezpečné a zábavné užívání před polykáním tablet.</p>
                     <p class="price">379 Kč</p>
                     <a href="products/product2.php" class="btn">Podrobnosti</a>
@@ -85,27 +92,6 @@
                     <p>Esenciální větvené aminokyseliny L-Leucin, L-Isoleucin a L-Valin pro ochranu svalové hmoty a urychlení regenerace během a po výkonu.</p>
                     <p class="price">649 Kč</p>
                     <a href="products/product7.php" class="btn">Podrobnosti</a>
-                </div>
-            </div>
-
-
-            <div class="offer__item">
-                <img src="images/produkt8.png" alt="Vitamíny Daily Mix" class="offer__img">
-                <div class="offer__info">
-                    <h2>ForHealth Pure Creatine Monohydrate</h2>
-                    <p>100% čistý, mikronizovaný kreatin monohydrát pro rychlý nárůst síly, výbušnosti a zlepšení sportovního výkonu.</p>
-                    <p class="price">499 Kč</p>
-                    <a href="products/product8.php" class="btn">Podrobnosti</a>
-                </div>
-            </div>
-
-            <div class="offer__item">
-                <img src="images/produkt9.png" alt="Detox Green Blend" class="offer__img">
-                <div class="offer__info">
-                    <h2>ForHealth Thermo SLIM - Pokročilý Spalovač Tuku</h2>
-                    <p>Silný termogenní spalovač tuku navržený pro zrychlení metabolismu a zvýšení energetického výdeje. Obsahuje kombinaci L-Karnitinu, zeleného čaje a kofeinu, které maximalizují spalování kalorií během cvičení i v klidu. Pomáhá kontrolovat chuť k jídlu a využívat tukové zásoby jako zdroj energie.</p>
-                    <p class="price">549 Kč</p>
-                    <a href="products/product9.php" class="btn">Podrobnosti</a>
                 </div>
             </div>
 

@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Produkt</title>
     <link rel="stylesheet" href="../css/style.css">
+        <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
 </head>
 <body>
+  <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
         <div class="site">
             <div class="header">
                 <div class="header__logo">
@@ -32,20 +38,20 @@
             <div class="product-detail__container">
                 <!-- Obrázek produktu -->
                 <div class="product-detail__image">
-                    <img src="../images/placeholder.jfif" alt="Protein ForHealth">
+                    <img src="../images/produkt1.png" alt="Protein ForHealth">
                 </div>
 
                 <!-- Informace o produktu -->
                 <div class="product-detail__info">
-                    <h1>Protein ForHealth</h1>
+                    <h1>ForHealth Advanced WHEY PROTEIN</h1>
                     <p class="product-detail__shortdesc">
                         Prémiový syrovátkový protein s vysokým obsahem bílkovin pro růst a regeneraci svalů.
                     </p>
-                    <p class="product-detail__price">Cena: 899 Kč</p>
+                    <p class="product-detail__price">Cena: 799 Kč</p>
 
                     <h3>Popis produktu</h3>
                     <p>
-                        ForHealth Protein je vysoce kvalitní doplněk stravy určený pro všechny, kteří chtějí
+                        ForHealth Advanced WHEY PROTEIN je vysoce kvalitní doplněk stravy určený pro všechny, kteří chtějí
                         podpořit růst svalové hmoty, zlepšit regeneraci po tréninku a dodat tělu potřebné živiny.
                         Díky minimálnímu obsahu cukru a tuku je vhodný pro sportovce i běžné uživatele.
                     </p>
@@ -59,7 +65,7 @@
                     </ul>
 
 
-                    <a href="order.php" class="btn btn--large">Objednat</a>
+                    <a href="cart_add.php?id=1" class="btn btn--large">Objednat</a>
                 </div>
             </div>
         </div>

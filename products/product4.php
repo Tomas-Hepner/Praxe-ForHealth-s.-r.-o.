@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Produkt</title>
     <link rel="stylesheet" href="../css/style.css">
+            <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
 </head>
 <body>
+  <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
         <div class="site">
             <div class="header">
                 <div class="header__logo">
@@ -32,34 +38,32 @@
             <div class="product-detail__container">
                 <!-- Obrázek produktu -->
                 <div class="product-detail__image">
-                    <img src="../images/placeholder.jfif" alt="Protein ForHealth">
+                    <img src="../images/produkt4.png" alt="Protein ForHealth">
                 </div>
 
                 <!-- Informace o produktu -->
                 <div class="product-detail__info">
-                    <h1>Protein ForHealth</h1>
+                    <h1>ForHealth Multi-Vitamín MAX</h1>
                     <p class="product-detail__shortdesc">
-                        Prémiový syrovátkový protein s vysokým obsahem bílkovin pro růst a regeneraci svalů.
+                        Komplexní směs 24 základních vitamínů a minerálů v bio-dostupné formě pro celkovou vitalitu a imunitu.
                     </p>
-                    <p class="product-detail__price">Cena: 899 Kč</p>
+                    <p class="product-detail__price">Cena: 349 Kč</p>
 
                     <h3>Popis produktu</h3>
                     <p>
-                        ForHealth Protein je vysoce kvalitní doplněk stravy určený pro všechny, kteří chtějí
-                        podpořit růst svalové hmoty, zlepšit regeneraci po tréninku a dodat tělu potřebné živiny.
-                        Díky minimálnímu obsahu cukru a tuku je vhodný pro sportovce i běžné uživatele.
+Komplexní denní směs 24 základních vitamínů a minerálů ve vysoce bio-dostupné formě. Podporuje celkovou vitalitu, imunitní systém a energetický metabolismus. Pomáhá pokrýt denní potřebu klíčových mikroživin pro optimální zdraví.
                     </p>
 
                     <h3>Parametry</h3>
                     <ul class="product-detail__params">
-                        <li>Hmotnost: 1 kg</li>
-                        <li>Obsah bílkovin: 80 %</li>
-                        <li>Chuť: Vanilka</li>
-                        <li>Balení: Uzavíratelný sáček</li>
+                        <li>Balení: 60 tablet (30 dávek)</li>
+                        <li>Dávka: 2 tablety</li>
+                        <li>Klíčové Vitamíny: B komplex, Vitamín D3 (2000 IU), Zinek, Hořčík, Železo</li>
+                        <li>Forma: Tablety</li>
                     </ul>
 
 
-                    <a href="order.php" class="btn btn--large">Objednat</a>
+                    <a href="cart_add.php?id=4" class="btn btn--large">Objednat</a>
                 </div>
             </div>
         </div>

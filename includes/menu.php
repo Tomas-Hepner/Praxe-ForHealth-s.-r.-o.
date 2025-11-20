@@ -1,3 +1,9 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
 
         <div class="header">
             <div class="header__logo">
@@ -15,7 +21,7 @@
                 <a href=""><img src="images/account.png" alt=""></a>
             </div>
             <div class="header__shopping__cart">
-                <a href=""><img src="images/basket.png" alt=""></a>
+                <a href="/cart.php"><img src="images/basket.png" alt=""></a>
             </div>
 
         </div>

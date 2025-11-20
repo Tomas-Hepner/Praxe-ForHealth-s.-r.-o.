@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Kontakt</title>
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 </head>
 <body>
         <?php include 'includes/menu.php'; ?>
+        <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
 
         <section class="contact">
             <h1>Kontaktujte nás</h1>
@@ -52,9 +59,9 @@
 
                     <div class="contact__person">
                         <h3>Kontaktní osoba</h3>
-                        <p><strong>Mgr. Jana Novotná</strong><br>
+                        <p><strong>Jan Kupeček</strong><br>
                         Vedoucí zákaznické podpory<br>
-                        E-mail: jana.novotna@forhealth.cz</p>
+                        E-mail: jan.kupecek@forhealth.cz</p>
                     </div>
                 </div>
             </div>
@@ -62,9 +69,9 @@
             <!-- MAPA -->
             <div class="contact__map">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.226275490787!2d12.9303!3d49.4392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDI2JzIxLjIiTiAxMsKwNTUnNTEuMSJF!5e0!3m2!1scs!2scz!4v0000000000"
-                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2594.108257786945!2d12.91894017670848!3d49.44467087141768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470ab06f42f49cc1%3A0xa36ec1100d2d4163!2zVnnFocWhw60gb2Rib3Juw6EgxaFrb2xhLCBPYmNob2Ruw60gYWthZGVtaWUgYSBTdMWZZWRuw60gemRyYXZvdG5pY2vDoSDFoWtvbGEgRG9tYcW-bGljZQ!5e0!3m2!1scs!2scz!4v1763104596724!5m2!1scs!2scz"
+                    width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe
             </div>
         </section>
     </div>
